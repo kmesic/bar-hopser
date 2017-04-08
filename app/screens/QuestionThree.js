@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View, ListView, Button, Picker } from 'react-native';
+import Globals from '../config/globals';
+import barsSearch from '../helper_functions/barsSearch';
 
 class QuestionThree extends Component {
   constructor(props) {
@@ -9,6 +11,8 @@ class QuestionThree extends Component {
     };
   };
   handleMoveToListPress = () => {
+    Globals.q3answer = this.state.dist;
+    barsSearch();
     this.props.navigation.navigate('BarsList');
   };
   render() {

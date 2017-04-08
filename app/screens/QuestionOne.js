@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View, ListView, Button, Picker } from 'react-native';
+import Globals from '../config/globals'
 
 class QuestionOne extends Component {
   constructor(props) {
@@ -10,6 +11,8 @@ class QuestionOne extends Component {
   };
 
   handleMoveToListPress = () => {
+    Globals.q1answer = this.state.hours;
+    console.log("THE ANSWER IS" + Globals.q1answer)
     this.props.navigation.navigate('QuestionTwo');
   };
   render() {
@@ -42,7 +45,7 @@ class QuestionOne extends Component {
                 title="Next"
             />
         </View>
-        
+
         <View style={{flex: 1, backgroundColor:'#fff'}}></View>
       </View>
     );

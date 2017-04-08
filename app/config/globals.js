@@ -1,4 +1,10 @@
 
-var BarsSearchObject = {}
+var q1answer;
+var q2answer;
+var q3answer;
+var barsSearchList; 
+class Globals {
 
-export default BarsSearchObject;
+}
+
+export default Globals;
