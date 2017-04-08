@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { List, ListItem} from 'react-native-elements';
 import {bars} from '../config/bars_data';
+import Globals from '../config/globals';
 
 const styles = StyleSheet.create({
   buttonHeight: {
@@ -35,6 +36,7 @@ class BarsList extends Component {
 
   };
   handleMoveToMaps = () => {
+    Globals.barsSearchList = this.state.barsSelected.slice();
     this.props.navigation.navigate('Ready');
   };
 
@@ -93,7 +95,6 @@ class BarsList extends Component {
     );
   }
 }
-
 
 
 export default BarsList;

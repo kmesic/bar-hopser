@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View, ListView, Button, Picker } from 'react-native';
+import Globals from '../config/globals';
+
 
 class Ready extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        title: "Current Bar",
+        title: Globals.barsSearchList[0].name,
         buttonText: "Start",
-        mainTimer: 0,
+        mainTimer: "1:00.00",
         hours: 1,
         minutes: 30,
         seconds: 30,
@@ -65,7 +67,7 @@ class Ready extends Component {
 }
 
   handleNext() {
-      this.countdown(120, 0);
+      this.countdown(60, 0);
   }
 
   _renderButtons() {
