@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import { Text, StyleSheet, View, ListView, Button } from 'react-native';
 
 
-const onButtonPress = () => {
-  console.log('button pressed');
-};
-
-
 /* TODO: Add radio buttons for selections */
 class Questions extends Component {
   handleMoveToListPress = () => {
