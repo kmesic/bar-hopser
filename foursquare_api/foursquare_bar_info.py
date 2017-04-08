@@ -13,7 +13,6 @@ client_secret = "G1WXTPWV3AVJXIVOYINQNOZSNBUFWBCDPRSJP5SQVJ0KNOGE"
 
 bar_df = []
 rating_df = []
-category = "bar"
 
 # Remove lines from csv that we don't want
 keywords = ['58ba4d7fea29b814257af65c','checkins']
