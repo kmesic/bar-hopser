@@ -1,0 +1,39 @@
+name,price,happyHour,rating,numRatings,categories,lat,long,checkins,url,fs_url
+Oggi's Pizza & Brewing Company,$$,True,8.0,88,Pizza Place,32.7799097253,-117.129052877,5353,http://oggis-hub.com,https://foursquare.com/v/oggis-pizza--brewing-company/43af1eb4f964a520902c1fe3
+Islands Restaurant,$$,True,8.0,109,Burger Joint,32.78155627,-117.1304351,5171,http://www.islandsrestaurants.com,https://foursquare.com/v/islands-restaurant/4aaac112f964a520375720e3
+Balboa's Taphouse,$,True,7.8,12,Pub,32.8241388138,-117.183378617,276,,https://foursquare.com/v/balboas-taphouse/538a1da7498e63a9b048cff1
+Blarney Stone Pub,$,True,7.9,75,Pub,32.8183850376,-117.178514034,3530,http://www.blarneystonesandiego.com,https://foursquare.com/v/blarney-stone-pub/40e0b100f964a520b4011fe3
+Helm's Brewing Co.,$,False,8.2,52,Brewery,32.8371839544,-117.138966322,1108,http://helmsbrewingco.com,https://foursquare.com/helmsbrewingco
+Carve Modern Deli & Beer,$,True,,,Deli / Bodega,32.808876,-117.141435,9,http://www.carvesd.com,https://foursquare.com/v/carve-modern-deli--beer/58ba4d7fea29b814257af65c
+Karaoke 101 Lounge,$$,False,7.7,28,Karaoke Bar,32.8329380104,-117.156422138,758,http://karaoke101.net,https://foursquare.com/v/karaoke-101-lounge/4f5d8166e4b0b28dd5cc1034
+Daisy Mesa,,False,,,Lounge,32.8071478596,-117.126386241,225,,https://foursquare.com/v/daisy-mesa/554aefbe498e8195ef6a6076
+McGregor's Grill & Ale House,$$,True,7.8,116,Sports Bar,32.7844964493,-117.111082077,6937,http://mcgregorssandiego.com,https://foursquare.com/v/mcgregors-grill--ale-house/40e0b100f964a52071021fe3
+O'Brien's Pub,$$,False,9.0,188,Pub,32.8252646248,-117.155878127,9368,http://obrienspub.net,https://foursquare.com/v/obriens-pub/40e0b100f964a52085021fe3
+Societe Brewing Company,$,False,9.4,389,Brewery,32.8337425538,-117.146015418,7565,http://societebrewing.com,https://foursquare.com/societebrewing
+Common Theory Public House,$$$,True,7.7,123,Gastropub,32.829269,-117.152757,2268,http://commontheorysd.com,https://foursquare.com/v/common-theory-public-house/53863e16498e5b2ac3cf75e3
+Elbow Room San Diego,$$,False,7.8,99,Bar,32.829356,-117.140967,2579,http://www.elbowroomsd.com,https://foursquare.com/elbowroomsd
+Courtyard San Diego Central,,False,6.7,45,Hotel,32.8260328472,-117.142316062,2827,http://www.marriott.com/sancy,https://foursquare.com/courtyard_sd
+San Diego Brewing Company,$$,True,8.1,127,Brewery,32.792241,-117.098914839,5321,http://sandiegobrewing.com,https://foursquare.com/v/san-diego-brewing-company/40e0b100f964a520b2021fe3
+Council Brewing Co.,$$,True,8.7,90,Brewery,32.8344709271,-117.154269797,1586,http://councilbrew.com,https://foursquare.com/v/council-brewing-co/536c35df498e66e48fedda3d
+Chorus Karaoke and Cafe,$$,True,6.9,49,Karaoke Bar,32.8204743167,-117.156037,2738,,https://foursquare.com/v/chorus-karaoke-and-cafe/4aab64e9f964a5208d5920e3
+Nara Ultra Lounge,$$$,True,6.8,32,Lounge,32.8321104627,-117.149875545,703,http://naraultralounge.com,https://foursquare.com/v/nara-ultra-lounge/51f4943a498e02711f0e8786
+Bullpen Bar & Grill,$$,True,7.5,77,Sports Bar,32.8322936036,-117.148071863,3438,http://www.bullpenbar.com,https://foursquare.com/v/bullpen-bar--grill/4a82377ef964a520edf81fe3
+94th Aero Squadron,$$,True,8.4,158,American Restaurant,32.8196854111,-117.136841581,3303,http://www.94thaerosquadron.signonsandiego.com,https://foursquare.com/v/94th-aero-squadron/40e0b100f964a5209a011fe3
+Islands Restaurant,$$,False,7.4,71,Burger Joint,32.82123639,-117.160035,3598,http://www.islandsrestaurants.com,https://foursquare.com/v/islands-restaurant/4ac2b524f964a520739a20e3
+Min Sok Chon,$$,False,7.5,69,Korean Restaurant,32.8243883209,-117.155941311,4515,http://www.minsokchonsd.com,https://foursquare.com/v/min-sok-chon/4a81299bf964a520a8f61fe3
+The Library Tavern,$,True,7.6,45,Cocktail Bar,32.8067876358,-117.077302253,4043,,https://foursquare.com/v/the-library-tavern/4a8a038ff964a520a60920e3
+SOHO,$$$,False,,,Cocktail Bar,32.824882,-117.15468,287,,https://foursquare.com/v/soho/56302903498e7d4770666700
+Wa Dining OKAN,$$,False,8.3,80,Japanese Restaurant,32.8141736106,-117.153816016,1664,http://okanus.com,https://foursquare.com/v/wa-dining-okan/4a8f6310f964a5201f1520e3
+The Locker Room,$,False,,,Pub,32.8365486906,-117.139466823,72,,https://foursquare.com/v/the-locker-room/4e38a027b0fb2f7ee85f948d
+Khan's Cave Grill and Tavern,$$,False,8.0,82,Asian Restaurant,32.8324277764,-117.127081365,2936,http://www.khanscave.com,https://foursquare.com/v/khans-cave-grill-and-tavern/489edf33f964a52084511fe3
+Pampas Bar & Grill,$$,True,7.8,27,Argentinian Restaurant,32.8099350545,-117.14106378,669,http://www.pampasbarandgrill.com,https://foursquare.com/v/pampas-bar--grill/4bc3ab50920eb713bed21d2c
+Groundswell Brewing Co.,$$,False,7.6,34,Brewery,32.7890154511,-117.099774432,580,http://groundswellbrew.com,https://foursquare.com/v/groundswell-brewing-co/5276e7ef11d283debf5c41ec
+The Break Room,,False,7.2,19,Pool Hall,32.8194881817,-117.154200868,659,,https://foursquare.com/v/the-break-room/50d536cce4b021b27f92b091
+Quantum Brewing,$$,False,5.4,19,Brewery,32.8306283625,-117.139260021,230,http://quantumbrewingsd.com,https://foursquare.com/v/quantum-brewing/5397c229498e9adfe3e4156b
+Benchmark Brewing Company,$,False,8.2,70,Brewery,32.787131947,-117.102043923,1017,http://www.benchmarkbrewing.com,https://foursquare.com/v/benchmark-brewing-company/511ac75ae4b0e23900ac9a42
+Kilowatt Brewing Company,$$,False,6.6,27,Brewery,32.8330886694,-117.156389344,554,http://kilowatt.beer,https://foursquare.com/v/kilowatt-brewing-company/54f279fd498ea31299ec30bf
+Longhorn Bar & Grill,$,False,7.7,36,American Restaurant,32.7916213495,-117.096631576,924,http://www.thelonghornsd.com,https://foursquare.com/v/longhorn-bar--grill/4cdc5940958f236aeb0eb203
+Spot KTV,$$,False,,,Karaoke Bar,32.831504457,-117.160502006,225,http://www.spotktv.com,https://foursquare.com/v/spot-ktv/4f1cc6b3e4b0e6badd01b770
+The Clairemont Lounge,$$$,False,,,Lounge,32.82732,-117.17195,23,,https://foursquare.com/v/the-clairemont-lounge/58706b095e56b41e0ad68af6
+JP's Pub,$,True,7.0,23,Bar,32.830153,-117.10457412,1289,http://jpspub.cfm,https://foursquare.com/v/jps-pub/4c37f94e3849c92875cfbeb1
+Excalibur Cigar Lounge,$$$,False,7.5,17,Lounge,32.83233,-117.147539,946,http://www.excaliburcigarlounge.com,https://foursquare.com/v/excalibur-cigar-lounge/4aa54e19f964a520f44720e3
