@@ -9,21 +9,13 @@ from pandas import DataFrame
 
 # Helper function for converting meters to lat/long
 
-def distcust(p, d, lat_m, long_m):
-	lat = p['lat']
-	long = p['long']
-	
-	lat1 = lat + lat_m * (d / (11100.0/90*1000) * cos(lat))
-	long1 = long + long_m * (d / (11100.0/90*1000))
-	
-	return {'lat': lat1, 'long': long1}
 
 client_id = "CJWU111FPB2PCOAESVKKDLN3JHL05CHPK4NIEQILSSDNJ534"
 client_secret = "G1WXTPWV3AVJXIVOYINQNOZSNBUFWBCDPRSJP5SQVJ0KNOGE"
 
 # Input user coordinates here:
-#p = {'lat': 37.7833, 'long': -122.4167} 	# central San Francisco, at Van Ness and Market
-p = {'lat': 32.8263819, 'long': -117.12981309999998}	# Northrop Grumman campus 
+#p = {'lat': 37.7833, 'long': -122.4167}    # central San Francisco, at Van Ness and Market
+p = {'lat': 32.8263819, 'long': -117.12981309999998}    # Northrop Grumman campus 
 
 # Radius of search 
 distance = 5000
@@ -36,27 +28,24 @@ gridSize = 1
 
 df = DataFrame()
 requested_keys = ["categories","id","location","name","stats"]
-category = "bar"
-category_id = "4d4b7105d754a06376d81259"
+category = ["beer bar","dive bar","pub","brewery"]
+category_id = ["56aa371ce4b08b9a8d57356c","4bf58dd8d48988d118941735","4bf58dd8d48988d11b941735","50327c8591d4c4b30a586d5d"]
 
-for x in [x1 / 10.0 for x1 in range(-3*gridSize, 3*gridSize)]:
-	for y in [y1 / 10.0 for y1 in range(-3*gridSize, 3*gridSize)]:
-		center = distcust(p,distance,x,y)
-		url = "https://api.foursquare.com/v2/venues/search?ll=%s,%s&intent=browse&radius=%s&categoryId=%s&client_id=%s&client_secret=%s&v=%s" % (center["lat"], center["long"], distance, category_id, client_id, client_secret, time.strftime("%Y%m%d"))
-		try:
-			req = urllib2.Request(url)
-			response = urllib2.urlopen(req)
-			data = json.loads(response.read())
-			response.close()
-	
-			data = DataFrame(data["response"]['venues'])[requested_keys]
-	
-			df = df.append(data,ignore_index=True)
-			print center
-			time.sleep(1) # stay within API limits
-		except Exception, e:
-			print e
-			
+for i in range(0,4):
+	url = "https://api.foursquare.com/v2/venues/search?ll=%s,%s&intent=browse&radius=%s&categoryId=%s&client_id=%s&client_secret=%s&v=%s" % (p["lat"],p["long"], distance, category_id[i], client_id, client_secret, time.strftime("%Y%m%d"))
+	try:
+		req = urllib2.Request(url)
+		response = urllib2.urlopen(req)
+		data = json.loads(response.read())
+		response.close()
+    
+		data = DataFrame(data["response"]['venues'])[requested_keys]
+    
+		df = df.append(data,ignore_index=True)
+		time.sleep(1) # stay within API limits
+	except Exception, e:
+		print e
+            
 
 df = df.drop_duplicates(cols='id',take_last=True)
 
@@ -66,4 +55,4 @@ df["long"] = df["location"].apply(lambda x: dict(x)["lng"])
 df["checkins"] = df["stats"].apply(lambda x: dict(x)["checkinsCount"])
 
 ordered_df = df[["name","id","categories","lat","long","checkins"]]
-ordered_df.to_csv("foursquare_%s_sd.csv" % category,encoding='utf-8', index=False)
+ordered_df.to_csv("foursquare_bars_sd.csv")
