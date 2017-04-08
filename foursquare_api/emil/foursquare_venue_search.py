@@ -9,14 +9,6 @@ from pandas import DataFrame
 
 # Helper function for converting meters to lat/long
 
-def distcust(p, d, lat_m, long_m):
-    lat = p['lat']
-    long = p['long']
-    
-    lat1 = lat + lat_m * (d / (11100.0/90*1000) * cos(lat))
-    long1 = long + long_m * (d / (11100.0/90*1000))
-    
-    return {'lat': lat1, 'long': long1}
 
 client_id = "CJWU111FPB2PCOAESVKKDLN3JHL05CHPK4NIEQILSSDNJ534"
 client_secret = "G1WXTPWV3AVJXIVOYINQNOZSNBUFWBCDPRSJP5SQVJ0KNOGE"
@@ -40,8 +32,7 @@ category = ["beer bar","dive bar","pub","brewery"]
 category_id = ["56aa371ce4b08b9a8d57356c","4bf58dd8d48988d118941735","4bf58dd8d48988d11b941735","50327c8591d4c4b30a586d5d"]
 
 for i in range(0,4):
-	center = distcust(p,distance,x,y)
-	url = "https://api.foursquare.com/v2/venues/search?ll=%s,%s&intent=browse&radius=%s&categoryId=%s&client_id=%s&client_secret=%s&v=%s" % (center["lat"], center["long"], distance, category_id[i], client_id, client_secret, time.strftime("%Y%m%d"))
+	url = "https://api.foursquare.com/v2/venues/search?ll=%s,%s&intent=browse&radius=%s&categoryId=%s&client_id=%s&client_secret=%s&v=%s" % (p["lat"],p["long"], distance, category_id[i], client_id, client_secret, time.strftime("%Y%m%d"))
 	try:
 		req = urllib2.Request(url)
 		response = urllib2.urlopen(req)
@@ -51,7 +42,6 @@ for i in range(0,4):
 		data = DataFrame(data["response"]['venues'])[requested_keys]
     
 		df = df.append(data,ignore_index=True)
-		print center
 		time.sleep(1) # stay within API limits
 	except Exception, e:
 		print e
@@ -65,4 +55,4 @@ df["long"] = df["location"].apply(lambda x: dict(x)["lng"])
 df["checkins"] = df["stats"].apply(lambda x: dict(x)["checkinsCount"])
 
 ordered_df = df[["name","id","categories","lat","long","checkins"]]
-ordered_df.to_csv("foursquare_%s_sd.csv" % category,encoding='utf-8', index=False)
+ordered_df.to_csv("foursquare_bars_sd.csv")
