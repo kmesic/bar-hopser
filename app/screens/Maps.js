@@ -8,9 +8,7 @@ class Maps extends Component {
 
   render() {
     return(
-      <View>
-      <Text>Maps page</Text>
-      </View>
+      <Text> Stuff </Text>
     );
   }
 
