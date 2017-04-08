@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View, ListView, Button } from 'react-native';
+import Globals from '../config/globals';
+
 
 class QuestionTwo extends Component {
   handleMoveToListPress = () => {
+    Globals.q2answer = false;
+    this.props.navigation.navigate('QuestionThree');
+  };
+  handleMoveToListPress_YES = () => {
+    Globals.q2answer = true;
     this.props.navigation.navigate('QuestionThree');
   };
   render() {
@@ -14,7 +21,7 @@ class QuestionTwo extends Component {
             <View style={{flexDirection: "row"}}>
                 <View style={{flex: 1}}>
                     <Button
-                        onPress={this.handleMoveToListPress}
+                        onPress={this.handleMoveToListPress_YES}
                         title="Yes"
                     />
                 </View>
